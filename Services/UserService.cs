@@ -26,6 +26,7 @@ public class UserService
             var userRoles = await _userManager.GetRolesAsync(user);
             var viewModel = new UserRoleViewModel
             {
+                UserId = user.Id,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 CompanyName = user.CompanyName,
@@ -37,6 +38,39 @@ public class UserService
 
         return result;
     }
+
+
+    public async Task<bool> ChangeUserRoleAsync(string userId, string newRole)
+    {
+        var user = await _userManager.FindByIdAsync(userId);
+
+        if (user == null)
+        {
+            return false;
+        }
+
+        var existingRoles = await _userManager.GetRolesAsync(user);
+        var result = await _userManager.RemoveFromRolesAsync(user, existingRoles);
+        if (!result.Succeeded)
+        {
+            return false;
+        }
+
+        result = await _userManager.AddToRoleAsync(user, newRole);
+        if (!result.Succeeded)
+        {
+            return false;
+        }
+
+        return true;
+
+
+    }
+
+
+
+
+
 }
 
 
