@@ -1,0 +1,62 @@
+﻿@model ProductRegistrationViewModel
+@{
+    ViewData["Title"] = "Registrera ny Product";
+}
+
+<div class="d-flex justify-content-center">
+    <div class="col-6">
+
+        <form method="post" novalidate style="margin-top: 150px">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="ArticleNumber" class="form-label"></label>
+                <input asp-for="ArticleNumber" class="form-control" />
+                <small><span asp-validation-for="ArticleNumber" class="text-danger"></span></small>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <small><span asp-validation-for="Name" class="text-danger"></span></small>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Price" class="form-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <small><span asp-validation-for="Price" class="text-danger"></span></small>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label"></label>
+                <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+                <small><span asp-validation-for="Description" class="text-danger"></span></small>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ImageUrl" class="form-label"></label>
+                <input asp-for="ImageUrl" class="form-control" />
+                <small><span asp-validation-for="Name" class="text-danger"></span></small>
+            </div>
+
+            <div class="mb-5">
+                @foreach (SelectListItem tag in ViewBag.Tags)
+                {
+                    <div class="mb-2">
+                        <input type="checkbox" name="Tags" id="tag-@tag.Text-@tag.Value" value="@tag.Value" checked="@tag.Selected" class="form-check-input" />
+                        <label for="tag-@tag.Text-@tag.Value" class="small form-check-label">@tag.Text</label>
+                    </div>
+                }
+            </div>
+
+            <button type="submit" class="btn-theme">Skapa</button>
+
+        </form>
+
+
+
+    </div>
+
+</div>
+

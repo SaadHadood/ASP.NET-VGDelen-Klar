@@ -1,0 +1,60 @@
+﻿@model GridCollectionViewModel
+
+@if (Model != null)
+{
+    <section class="up-to-sell">
+        <div class="container">
+
+            @if (!string.IsNullOrEmpty(Model.Title))
+            {
+                <h1 class="collection-title" style="text-align:center; padding-bottom: 20px">@Model.Title</h1>
+            }
+
+            <div class="collection-grid">
+
+                <div class="item-1">
+                    @if (Model.GridItems != null)
+                    {
+                        <div class="grid">
+                            @foreach (var item in Model.GridItems.Take(1))
+                            {
+                                <partial name="/Views/Partials/_GridCollectionItem.cshtml" model="item" />
+                            }
+                        </div>
+                    }
+                </div>
+
+                <div class="discover">
+
+                    <div class="collection-content">
+                        <div class="container">
+                            <div class="title-red">UP TO SELL</div>
+                            <div class="title">50% OFF</div>
+                            <div class="ingress">Get the Best Price</div>
+                            <div class="text">Get the best daily offer et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea taki</div>
+                            <a href="#" class="link">Discover More</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="item-2">
+                    @if (Model.GridItems != null)
+                    {
+                        <div class="grid">
+                            @foreach (var item in Model.GridItems)
+                            {
+                                @if (item.Id == "SR98839")
+                                {
+                                    <partial name="/Views/Partials/_GridCollectionItem.cshtml" model="item" />
+                                }
+                            }
+                        </div>
+                    }
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+}

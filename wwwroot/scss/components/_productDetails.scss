@@ -1,0 +1,134 @@
+.sproduct {
+
+
+    .small-img-group {
+        display: flex;
+        justify-content: space-between;
+
+        .small-img-col {
+            flex-basis: 24.2%;
+            cursor: pointer;
+        }
+    }
+
+
+    .right-div {
+        margin-left: 70px;
+    }
+
+    .stars {
+        margin: 40px 0 20px 0;
+        font-size: 20px;
+
+        i {
+            color: $color-yellow;
+        }
+
+        .reviews {
+            font-family: $font-roboto;
+            font-weight: $font-weight-regular;
+            color: $color-dark-2;
+            padding-left: 10px;
+            font-size: 14px;
+        }
+    }
+
+    h3 {
+        font-family: $font-poppins;
+        font-weight: $font-weight-medium;
+        color: $color-dark-2;
+        font-size: 24px;
+        padding-bottom: 18px;
+    }
+
+    
+    .quantity {
+
+        span {
+            cursor: pointer;
+        }
+
+        .minus, .plus {
+			padding:8px 20px 8px 20px;
+			border:1px solid $color-theme-3;
+            vertical-align: middle;
+            text-align: center;
+            margin: -5px;
+            color: $color-dark-0;
+            font-size: 24px;
+        }
+
+        input {
+            height:48px;
+            width: 50px;
+            text-align: center;
+            border:1px solid $color-theme-3 ;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: white;
+        }
+
+        .btn-theme {
+            text-align: center;
+            margin-left: 20px;
+            height: 50px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .shopping-cart {
+            color: $color-white;
+            padding-left: 10px;
+        }
+
+    }
+
+
+    .circle-container {
+        display: flex;
+        align-items: start;
+        
+        .circle {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+
+        .red {
+            background-color: $color-theme-1;
+        }
+
+        .yellow {
+            background-color: $color-yellow;
+        }
+
+        .blue {
+            background-color: $color-green;
+        }
+
+        span {
+            font-family: $font-roboto;
+            font-weight: $font-weight-regular;
+            color: $color-dark-2;
+            margin-left: 30px;
+            margin-top: -3px;
+        }
+
+      }
+
+      .btn-outline-white {
+        border-color: $color-dark-4;
+        width: 194px;
+      }
+
+
+      .category {
+        font-family: $font-roboto;
+        font-weight: $font-weight-regular;
+        margin-top: 20px;
+      }
+
+
+
+}

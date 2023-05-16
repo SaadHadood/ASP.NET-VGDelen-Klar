@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Backoffice";
+}
+
+<section class="backoffice-menu">
+    <div class="container">
+        <div class="logo"><img src="images/logo.svg" alt="">bmerketo</div>
+        <div><h1>Backoffice</h1></div>
+
+
+        <div class="Backoffice-button">
+            <a asp-controller="Admin" asp-action="Users" class="btn-theme">See All Users</a>
+            <a asp-controller="Products" asp-action="Register" class="btn-theme">Add New Product</a>
+        </div>
+    </div>
+</section>

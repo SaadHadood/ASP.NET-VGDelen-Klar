@@ -1,0 +1,52 @@
+.login-form {
+    padding: 211px 0 211px 0;
+
+    @include lg {
+        padding: 320px 0 319.9px 0;
+    }
+
+    .container {
+        border: 0px solid $color-dark-5;
+        padding: 30px;
+
+        @include md {
+            border: 1px solid $color-dark-5;
+        }
+    }
+
+    .title {
+        margin-bottom: 40px;
+    }
+
+    form {
+        display: grid;
+        column-gap: 30px;
+        row-gap: 30px;
+
+        .email-label {
+            display:inline-block;
+        }
+
+        .link-register {
+            margin-left: 20px;
+            text-align: center;
+            align-items: center;
+            text-decoration: none;
+            color: $color-theme-1;
+            font-weight: $font-weight-regular;
+            font-size: 14px;
+        }
+
+        .terms {
+            margin: 20px 0;
+        }
+
+        button {
+
+            @include lg {
+                display: flex;
+                justify-self: flex-start;
+            }
+        }
+    }
+}

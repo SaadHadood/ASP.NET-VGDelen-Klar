@@ -1,0 +1,220 @@
+﻿@model ProductModel
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<partial name="/Views/Partials/_Breadcrumb.cshtml" />
+
+<!--productDetails start-->
+<section class="container sproduct my-3 pt-3">
+    <div class="row mt-3">
+        <div class="col-lg-5 col-md-12 col-12">
+            <img class="img-fluid w-100 pb-1" src="@Model.ImageUrl" alt="">
+
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="~/images/placeholders/120x113.svg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="~/images/placeholders/120x113.svg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="~/images/placeholders/120x113.svg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="~/images/placeholders/120x113.svg" width="100%" class="small-img" alt="">
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="right-div col-lg-6 col-md-12 col-12">
+            <h3>@Model.Name</h3>
+            <p>@Model.Description</p>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span class="reviews">16 Reviews</span>
+            </div>
+            <h3>$@Model.Price</h3>
+
+
+            <div class="quantity">
+                <span class="minus">-</span>
+                <input type="text" value="1" />
+                <span class="plus">+</span>
+                <button class="btn-theme">Add to Cart <span class="shopping-cart" href="#"><i class="fa-regular fa-cart-plus"></i></span></button>
+            </div>
+
+
+            <div class="circle-container my-3">
+                <div class="circle red"></div>
+                <div class="circle yellow"></div>
+                <div class="circle blue"></div>
+                <span>SKU: N/A</span>
+            </div>
+
+            <button class="btn-outline-white mt-2">Add to wishlist</button>
+            <p class="category">Category: Table Lamp, Light</p>
+
+
+        </div>
+
+
+    </div>
+</section>
+<!--productDetails end-->
+<!--productDet start-->
+<section class="fproduct">
+    <div class="container">
+
+        <div class="buttons">
+            <button class="btn-outline-white">DESCRIPTION</button>
+            <button class="btn-outline-white">ADDITIONAL INFO</button>
+            <button class="btn-outline-white">REVIEWS (0)</button>
+            <button class="btn-outline-white">SHIPPING & DELIVERY</button>
+        </div>
+
+        <h3>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</h3>
+
+        <div class="content-div">
+
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor<br> invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et<br> justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem<br> ipsum dolor sit amet. Lorem ipsum dolor.</p>
+                <p>accusantium laborum pretium hic excepturi harum repellat facilisis convallis potenti,<br> adipiscing lectus aliqua. Asperiores repudiandae ipsam error erat, accusamus, cum taciti</p>
+                <p>Praesentium, pariatur, tempora consequuntur purus sapiente, iaculis vitae consequatur,<br> rhoncus earum eleifend, hendrerit ipsum rhoncus ex error, impedit! Alias laboris sequi curae<br> aptent? Eu sagittis eu, distinctio tortor? Dapibus delectus! Consequuntur luctus. </p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor<br> invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et<br> justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem<br> ipsum dolor sit amet. Lorem ipsum dolor.</p>
+            </div>
+
+            <div class="image">
+                <img src="~/images/placeholders/469x356.svg" alt="">
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+</section>
+<!--productDet end-->
+<!--Related Products start-->
+<section class="Related-product">
+    <div class="container">
+        <div class="section-title">
+            <h3>Related Products</h3>
+        </div>
+
+        <div class="collection-grid">
+
+            <!-- collection-item start -->
+            <a href="#" class="collection-item">
+                <img src="~/images/placeholders/270x295.svg" alt="">
+                <div class="body">
+                    <div class="title">Apple watch collection</div>
+                    <div class="info">
+                        <div class="price">$30.00</div>
+                        <i class="add-cart fa-regular fa-cart-plus"></i>
+                    </div>
+                </div>
+            </a>
+            <!-- collection-item end -->
+            <!-- collection-item start -->
+            <a href="#" class="collection-item">
+                <img src="~/images/placeholders/270x295.svg" alt="">
+                <div class="body">
+                    <div class="title">Apple watch collection</div>
+                    <div class="info">
+                        <div class="price">$30.00</div>
+                        <i class="add-cart fa-regular fa-cart-plus"></i>
+                    </div>
+                </div>
+            </a>
+            <!-- collection-item end -->
+            <!-- collection-item start -->
+            <a href="#" class="collection-item">
+                <img src="~/images/placeholders/270x295.svg" alt="">
+                <div class="body">
+                    <div class="title">Apple watch collection</div>
+                    <div class="info">
+                        <div class="price">$30.00</div>
+                        <i class="add-cart fa-regular fa-cart-plus"></i>
+                    </div>
+                </div>
+            </a>
+            <!-- collection-item end -->
+            <!-- collection-item start -->
+            <a href="#" class="collection-item">
+                <img src="~/images/placeholders/270x295.svg" alt="">
+                <div class="body">
+                    <div class="title">Apple watch collection</div>
+                    <div class="info">
+                        <div class="price">$30.00</div>
+                        <i class="add-cart fa-regular fa-cart-plus"></i>
+                    </div>
+                </div>
+            </a>
+            <!-- collection-item end -->
+
+        </div>
+
+
+
+    </div>
+</section>
+<!--Related Products end-->
+<!--more Products start-->
+<section class="more-product">
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="~/images/placeholders/200x122.svg" alt="Card image">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="~/images/placeholders/200x122.svg" alt="Card image">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="~/images/placeholders/200x122.svg" alt="Card image">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="~/images/placeholders/200x122.svg" alt="Card image">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="~/images/placeholders/200x122.svg" alt="Card image">
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+</section>
+<!--more Products end-->

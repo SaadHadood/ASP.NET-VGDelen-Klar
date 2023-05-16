@@ -1,0 +1,33 @@
+.backoffice-menu {
+    padding: 120px 0px;
+
+    .container {
+        margin-top: 150px;
+        display: flex-block;
+        align-items: center;
+        text-align: center;
+
+        .logo {
+            padding-bottom: 5px;
+            font-weight: bold;
+            color: $color-dark-0;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            font-size: 30px;
+        }
+
+        .Backoffice-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .btn-theme {
+                width: 350px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

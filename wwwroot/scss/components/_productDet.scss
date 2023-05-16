@@ -1,0 +1,74 @@
+.fproduct {
+
+    .buttons {
+        display: flex;
+        flex-wrap: nowrap;
+        
+
+        button {
+            flex: 1;
+            margin-right: 0;
+            margin-top: 20px;
+            border-color: $color-dark-5;
+
+            &:hover {
+                background-color: $color-theme-1;
+            }
+
+
+            &:last-child {
+                margin-right: 0;
+              }
+
+        }
+
+    }
+
+    h3 {
+        font-family: $font-poppins;
+        font-weight: $font-weight-bold;
+        color: #363636;
+        font-size: 22px;
+        margin-top: 20px;
+    }
+
+    .text {
+        margin-top: 10px;
+
+        p {
+            margin-bottom: 45px;
+            line-height: 1.5;
+        }
+
+        &:last-child {
+            margin-right: 0;
+          }
+    }
+
+
+    .content-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+
+
+        .image {
+            flex-basis: 40%;
+            margin-top: -40px;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+      
+    }
+
+
+
+
+
+}

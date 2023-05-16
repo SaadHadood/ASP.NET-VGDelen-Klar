@@ -1,0 +1,64 @@
+﻿@model ContactFormViewModel
+
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<partial name="/Views/Partials/_Breadcrumb.cshtml" />
+
+<section class="contact-form">
+    <div class="container">
+        <div class="title">Write something</div>
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <form method="post" enctype="multipart/form-data" novalidate>
+
+            <div class="name form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name">
+                <small><span asp-validation-for="Name" class="text-danger"></span></small>
+            </div>
+
+
+            <div class="email form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email">
+                <small><span asp-validation-for="Email" class="text-danger"></span></small>
+            </div>
+
+
+            <div class="phoneNumber form-group">
+                <label asp-for="Mobile"></label>
+                <input asp-for="Mobile" id="phone" type="text">
+            </div>
+
+
+            <div class="companyName form-group">
+                <label asp-for="CompanyName"></label>
+                <input asp-for="CompanyName" id="company" type="text">
+            </div>
+
+
+            <div class="message form-group">
+                <label asp-for="Message"></label>
+                <textarea asp-for="Message" id="message"></textarea>
+                <small><span asp-validation-for="Message" class="text-danger"></span></small>
+            </div>
+
+
+            <div class="terms form-checkbox-group">
+                <label class="custom-checkbox">
+                    Save my name, email in the this browser for the next time I comment.
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+
+            <button type="submit" class="btn-theme">Submit</button>
+        </form>
+    </div>
+</section>
+
+<partial name="/Views/Partials/_GoogleMaps.cshtml" />
