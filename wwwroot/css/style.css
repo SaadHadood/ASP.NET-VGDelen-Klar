@@ -1232,6 +1232,55 @@ footer .container {
   color: #dd504c;
 }
 
+.account-card {
+  padding-top: 110px;
+  padding-bottom: 120px;
+}
+.account-card .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+.account-card h1 {
+  padding-top: 15px;
+}
+.account-card .title {
+  color: grey;
+  font-size: 18px;
+}
+.account-card button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+.account-card a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+.account-card button:hover, .account-card a:hover {
+  opacity: 0.7;
+}
+
+.denied {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 180px;
+}
+.denied .container {
+  text-align: center;
+}
+
 .sproduct .small-img-group {
   display: flex;
   justify-content: space-between;

@@ -12,6 +12,10 @@
             @if(signInManager.IsSignedIn(User))
             {
                 <a class="link me-5" asp-controller="shopping" asp-action="chart"><i class="fa-solid fa-cart-shopping"></i></a>
+                @if (User.IsInRole("admin"))
+                {
+                    <a class="link" asp-controller="admin" asp-action="index">Admin</a>
+                }
                 <a class="link" asp-controller="account" asp-action="index">@User.Identity?.Name</a>
                 <a class="link" asp-controller="logout" asp-action="index">Logout</a>
             }

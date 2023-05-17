@@ -8,12 +8,14 @@ public class UserRegisterViewModel
 {
     [Display(Name = "First Name*")]
     [Required(ErrorMessage = "You must provide a first name.")]
+    [MinLength(2, ErrorMessage = "Your first name must be at least 2 characters long.")]
     [RegularExpression(@"^[a-öA-Ö]+(?:[ é-][a-öA-Ö]+)*$", ErrorMessage = "Du måste ange ett giltig förnamn")]
     public string FirstName { get; set; } = null!;
 
 
     [Display(Name = "Last Name*")]
     [Required(ErrorMessage = "You must provide a last name.")]
+    [MinLength(2, ErrorMessage = "Your last name must be at least 2 characters long.")]
     [RegularExpression(@"^[a-öA-Ö]+(?:[ é-][a-öA-Ö]+)*$", ErrorMessage = "Du måste ange ett giltig förnamn")]
     public string LastName { get; set; } = null!;
 
