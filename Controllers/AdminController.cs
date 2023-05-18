@@ -26,17 +26,33 @@ public class AdminController : Controller
 
 
     [HttpPost]
-    public async Task<IActionResult> Users(string userId, string selectedRole)
+    public async Task<IActionResult> Users(string userId, string selectedRole, string action)
     {
-        var success = await _userService.ChangeUserRoleAsync(userId, selectedRole);
-        if (success)
+        if (action == "delete")
         {
-            return RedirectToAction("Users");
+            var success = await _userService.RemoveUser(userId);
+            if (success)
+            {
+                return RedirectToAction("Users");
+            }
+            else
+            {
+                return RedirectToAction("Error", "User");
+            }
         }
         else
         {
-            return RedirectToAction("Error", "User");
+            var success = await _userService.ChangeUserRoleAsync(userId, selectedRole);
+            if (success)
+            {
+                return RedirectToAction("Users");
+            }
+            else
+            {
+                return RedirectToAction("Error", "User");
+            }
         }
     }
+
 
 }

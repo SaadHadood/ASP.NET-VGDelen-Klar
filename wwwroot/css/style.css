@@ -1214,22 +1214,26 @@ footer .container {
   line-height: 1.2;
 }
 
-.table a.table-link {
+.table button.table-link {
   margin: 0 5px;
   font-size: 1.125em;
 }
 
-.table a.table-link:hover {
+.table button.table-link:hover {
   text-decoration: none;
   color: #2aa493;
 }
 
-.table a.table-link.danger {
+.table button.table-link.danger {
   color: #fe635f;
 }
 
-.table a.table-link.danger:hover {
+.table button.table-link.danger:hover {
   color: #dd504c;
+}
+
+.table-link.delete {
+  border: none;
 }
 
 .account-card {
