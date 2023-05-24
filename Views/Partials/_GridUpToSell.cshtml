@@ -42,12 +42,11 @@
                     @if (Model.GridItems != null)
                     {
                         <div class="grid">
-                            @foreach (var item in Model.GridItems)
+                            @foreach (var item in Model.GridItems.Skip(1).Take(1))
                             {
-                                @if (item.Id == "SR98839")
-                                {
-                                    <partial name="/Views/Partials/_GridCollectionItem.cshtml" model="item" />
-                                }
+
+                                <partial name="/Views/Partials/_GridCollectionItem.cshtml" model="item" />
+
                             }
                         </div>
                     }
