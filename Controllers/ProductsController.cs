@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Data;
 using WebApp.Services;
 using WebApp.ViewModels;
 
@@ -43,7 +45,7 @@ public class ProductsController : Controller
         return View(viewModel);
     }
 
-
+    [Authorize(Roles = "admin")]
     public async Task<IActionResult> Register()
     {
         ViewBag.Tags = await _tagService.GetTagsAsync();
@@ -51,6 +53,7 @@ public class ProductsController : Controller
     }
 
     [HttpPost]
+    [Authorize(Roles = "admin")]
     public async Task<IActionResult> Register(ProductRegistrationViewModel productRegistrationViewModel, string[] tags)
     {
         if (ModelState.IsValid)
