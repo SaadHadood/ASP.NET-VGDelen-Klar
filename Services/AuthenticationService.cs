@@ -73,4 +73,40 @@ public class AuthenticationService
         return false;
     }
 
+
+
+
+
+    public async Task<bool> RegisterAdminUserAsync(AdminUserRegisterViewModel viewModel)
+    {
+
+        AppUser appUser = viewModel;
+        var roleName = "user";
+
+
+        if (!await _roleManager.Roles.AnyAsync())
+        {
+            await _roleManager.CreateAsync(new IdentityRole("admin"));
+            await _roleManager.CreateAsync(new IdentityRole("user"));
+        }
+
+        if (!await _userManager.Users.AnyAsync())
+            roleName = "admin";
+
+        var result = await _userManager.CreateAsync(appUser, viewModel.Password);
+        if (result.Succeeded)
+        {
+            await _userManager.AddToRoleAsync(appUser, roleName);
+
+            var addressEntity = await _addressService.GetOrCreateAsync(viewModel);
+            if (addressEntity != null)
+            {
+                await _addressService.AddAddressAsync(appUser, addressEntity);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 }
